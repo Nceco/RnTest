@@ -15,8 +15,7 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'center',
         alignItems:'center',
-        paddingTop:iosTop,
-        paddingHorizontal:10
+        paddingTop:iosTop
     },
     textStyle:{
         color:'white',
