@@ -12,10 +12,10 @@ target 'myProject' do
     :hermes_enabled => false
   )
 
-  target 'myProjectTests' do
-    inherit! :complete
-    # Pods for testing
-  end
+  # target 'myProjectTests' do
+  #   # inherit! :complete
+  #   # Pods for testing
+  # end
 
   # Enables Flipper.
   #

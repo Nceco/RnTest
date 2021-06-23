@@ -23,7 +23,7 @@ class NavBar extends Component{
         const { navStyle , titleStyle , title } = this.props
         return (
             <View style={[styles.container,navStyle]}>
-                <Text style={titleStyle}>{title ? '46':'react-native'}</Text>
+                <Text style={titleStyle}>{title ? 'hhh':'react-native'}</Text>
             </View>
         )
     }
