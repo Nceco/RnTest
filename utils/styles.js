@@ -1,0 +1,1 @@
+export const getThemColor = () => '#FF5E24'

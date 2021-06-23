@@ -10,8 +10,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		6B018602268224150089FA09 /* main.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B018600268224150089FA09 /* main.ios.jsbundle */; };
-		6B018603268224150089FA09 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 6B018601268224150089FA09 /* assets */; };
+		6B48F87A268363DC00F6C72F /* main.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B48F878268363DC00F6C72F /* main.ios.jsbundle */; };
+		6B48F87B268363DC00F6C72F /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 6B48F879268363DC00F6C72F /* assets */; };
 		6BE1166626720AE90097BA5F /* brid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1166526720AE90097BA5F /* brid.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		DB7E9AEBDF94CD7702B3E422 /* libPods-myProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2002EA6999159CD3FD144E /* libPods-myProject.a */; };
@@ -28,8 +28,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = myProject/main.m; sourceTree = "<group>"; };
 		3B4FA1CD2E2E17BBB7F047CF /* libPods-myProject-myProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myProject-myProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2002EA6999159CD3FD144E /* libPods-myProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B018600268224150089FA09 /* main.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.ios.jsbundle; path = bundle/main.ios.jsbundle; sourceTree = "<group>"; };
-		6B018601268224150089FA09 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = bundle/assets; sourceTree = "<group>"; };
+		6B48F878268363DC00F6C72F /* main.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.ios.jsbundle; path = bundle/main.ios.jsbundle; sourceTree = "<group>"; };
+		6B48F879268363DC00F6C72F /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = bundle/assets; sourceTree = "<group>"; };
 		6BE1166426720AE90097BA5F /* myProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		6BE1166526720AE90097BA5F /* brid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brid.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = myProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		13B07FAE1A68108700A75B9A /* myProject */ = {
 			isa = PBXGroup;
 			children = (
-				6B018601268224150089FA09 /* assets */,
-				6B018600268224150089FA09 /* main.ios.jsbundle */,
+				6B48F879268363DC00F6C72F /* assets */,
+				6B48F878268363DC00F6C72F /* main.ios.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -199,8 +199,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
-				6B018603268224150089FA09 /* assets in Resources */,
-				6B018602268224150089FA09 /* main.ios.jsbundle in Resources */,
+				6B48F87B268363DC00F6C72F /* assets in Resources */,
+				6B48F87A268363DC00F6C72F /* main.ios.jsbundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

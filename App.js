@@ -34,16 +34,7 @@ class App extends Component{
       <View style={styles.container}>
          <NavBar 
             title={'首页'}
-            titleStyle={{color:'#333333',fontSize:17}}
          />
-         {/* <CstylBtn
-          title='BTN'
-          titleStyle={{color:'#FFFFFF',fontSize:17}}
-          btnStyle={{width:getScreenWidth() - 30,marginLeft:15}}
-          onPress={() => {
-            console.log('hello')
-          }}
-         /> */}
          <NavigatorApp/>
       </View>
     )
