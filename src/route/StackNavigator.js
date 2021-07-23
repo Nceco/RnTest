@@ -2,9 +2,9 @@ import {createStackNavigator} from 'react-navigation-stack'
 import Route from './route'
 
 const AppNavigator = createStackNavigator(Route,{
-    initialRouteName:'HomePage',
+    initialRouteName:'MainPage',
     mode:'card',
-    headerMode:null
+    headerMode:'none'
 })
 
 export default AppNavigator

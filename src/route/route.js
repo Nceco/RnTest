@@ -1,6 +1,6 @@
 import PageOne from "../page/PageOne"
 import PageTwo from "../page/PageTwo"
-import HomePage from "../page/HomePage"
+import MainPage from "../page/MainPage"
 
 const Route = {
     PageOne:{
@@ -11,8 +11,8 @@ const Route = {
         screen:PageTwo,
         desc:'页面2'
     },
-    HomePage:{
-        screen:HomePage,
+    MainPage:{
+        screen:MainPage,
         desc:'首页界面'
     }
 }
