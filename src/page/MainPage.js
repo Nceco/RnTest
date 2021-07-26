@@ -86,6 +86,7 @@ class MainPage extends Component{
         }
     }
     tabBarPress = (title) => {
+        console.log(this.props)
         this.setState({title})
     }
     render(){
@@ -108,7 +109,7 @@ class MainPage extends Component{
                                     renderSelectedIcon={() => getIcon(index,'renderSelectedIcon')}
                                     onPress={() => {this.tabBarPress(item.title)}}
                                 >
-                                    <item.component/>
+                                    <item.component navigation={this.props.navigation}/>
                                 </TabNavigator.Item>
                             )
                         })

@@ -25,7 +25,7 @@ class BackBtn extends Component{
                 }}
                 style={styles.btnStyle}
             >
-                <Image source={require('./image/left_arrow.png')} style={{width:8.5,height:15.5}} />
+                <Image source={require('../../src/resource/arrow_left_white.png')} style={{width:8.5,height:15.5}} />
             </TouchableOpacity>
         )
     }

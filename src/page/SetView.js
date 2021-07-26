@@ -7,7 +7,8 @@ import Spacer from '../../components/Spacer'
 
 class SetView extends Component{
     goPage = () => {
-        console.log(this.props)
+        const {navigate} = this.props.navigation
+        navigate('PageOne')
     }
     render(){
         return (

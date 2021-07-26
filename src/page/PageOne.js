@@ -21,7 +21,7 @@ class PageOne extends Component{
         super(props)
     }
     render(){
-        const {title} = this.props.navigation.state.params
+        const {title} = this.props.navigation.state.params || 'default'
         return (
             <View style={styles.container}>
                 <NavBar
