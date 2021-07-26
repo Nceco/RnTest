@@ -6,12 +6,12 @@ import TabNavigator from 'react-native-tab-navigator'
 import { iosBottom } from '../../utils/ios'
 import MyView from './MyView'
 import HomeView from './HomeView'
+import SetView from './SetView'
 
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:DefaultBackgroundColor,
-        paddingTop:30
+        backgroundColor:DefaultBackgroundColor
     },
     btnViewStyle:{
         flexDirection:'row',
@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
 
 const tabItemArray = [
     {title:'首页',component:HomeView,key:'HomeView'},
-    {title:'我的',component:MyView,key:'MyView'}
+    {title:'我的',component:MyView,key:'MyView'},
+    {title:'设置',component:SetView,key:'SetView'}
 ]
 
 const tabItemImages = [
@@ -62,6 +63,10 @@ const tabItemImages = [
     {
         renderIcon:require('../resource/images/my.png'),
         renderSelectedIcon:require('../resource/images/my_selected.png')
+    },
+    {
+        renderIcon:require('../resource/images/setting.png'),
+        renderSelectedIcon:require('../resource/images/setting_selected.png')
     }
 ]
 

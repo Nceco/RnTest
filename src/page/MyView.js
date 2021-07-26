@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import {View,StyleSheet} from 'react-native'
+import {View,StyleSheet,ScrollView} from 'react-native'
 import NavBar from '../../components/navbar/NavBar'
 import { DefaultBackgroundColor } from '../../utils/styles'
 

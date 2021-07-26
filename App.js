@@ -1,6 +1,8 @@
 import React,{Component} from 'react'
 import {createAppContainer} from 'react-navigation'
-import {StyleSheet,View} from 'react-native'
+import {StyleSheet,View,Text,ScrollView} from 'react-native'
+import NavBar from './components/navbar/NavBar'
+// import Spacer from './components/Spacer'
 import 'react-native-gesture-handler'
 
 import AppNavigator from './src/route/StackNavigator'
