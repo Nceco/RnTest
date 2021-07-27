@@ -1,11 +1,12 @@
 import React,{Component} from 'react'
 import {View,StyleSheet,Text, RefreshControl, StatusBar} from 'react-native'
 import NavBar from '../../components/navbar/NavBar'
-import {getThemColor} from '../../utils/styles'
+import {DefaultBackgroundColor, getThemColor} from '../../utils/styles'
 import CstylBtn from '../../components/btnCom/CstylBtn'
 import Spacer from '../../components/Spacer'
 import CstyleModal from '../../components/CstyleModal'
 import { ScrollView } from 'react-navigation'
+import CstyleSwitch from '../../testComponents/CstyleSwitch'
 
 const styles = StyleSheet.create({
     container:{
@@ -20,7 +21,8 @@ class MyView extends Component{
         this.state = {
             modalVisible:false,
             eachArray:[1,2,3,4,5,6,7,8,9,10],
-            refreshing:false
+            refreshing:false,
+            switchVal:false
         }
     }
 
@@ -41,8 +43,14 @@ class MyView extends Component{
         },600)
     }
 
+    valueChange = (status) => {
+        this.setState({
+            switchVal:status
+        })
+    }
+
     render(){
-        const {modalVisible,eachArray,refreshing} = this.state
+        const {modalVisible,eachArray,refreshing,switchVal} = this.state
         return (
             <View style={styles.container}>
                 <NavBar
@@ -61,6 +69,16 @@ class MyView extends Component{
                         }}
                     />
                 </View>
+                <Spacer/>
+                <View style={{justifyContent:'center',alignItems:'center'}}>
+                    <CstyleSwitch 
+                        value={switchVal} 
+                        disabled={false} 
+                        trackColor={{ false: "#EFEFEF", true:getThemColor() }}
+                        onValueChange={this.valueChange}
+                    />
+                </View>
+                <Spacer/>
                 <ScrollView 
                     style={{flex:1}}
                     showsVerticalScrollIndicator={false}
