@@ -1,14 +1,14 @@
 import React, {Component} from 'react'
 import NavBar from '../../components/navbar/NavBar'
-import {View} from 'react-native'
+import {View,DeviceEventEmitter} from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import CstyleSingleLine from '../../components/CstyleSingleLine'
-import Spacer from '../../components/Spacer'
 
 class SetView extends Component{
     goPage = () => {
         const {navigate} = this.props.navigation
         navigate('PageOne')
+        DeviceEventEmitter.emit('changeStatusBarStyle','dark-content')
     }
     render(){
         return (

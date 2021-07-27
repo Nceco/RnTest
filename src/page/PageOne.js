@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
-import {View,Text,StyleSheet} from 'react-native'
+import {View,Text,StyleSheet,DeviceEventEmitter} from 'react-native'
 import NavBar from '../../components/navbar/NavBar'
-import { DefaultBackgroundColor } from '../../utils/styles'
+import { DefaultBackgroundColor, globalBarStyle } from '../../utils/styles'
 import BackBtn from '../../components/navbar/BackBtn'
 import WhenRender from '../../components/WhenRender'
 import _ from 'lodash'
@@ -20,13 +20,18 @@ class PageOne extends Component{
     constructor(props){
         super(props)
     }
+
+    componentWillUnmount(){
+        DeviceEventEmitter.emit('changeStatusBarStyle',globalBarStyle)
+    }
+
     render(){
         const {title} = this.props.navigation.state.params || 'default'
         return (
             <View style={styles.container}>
                 <NavBar
                     title='PageOne'
-                    leftEl={(<BackBtn onBackPress={() => {this.props.navigation.pop()}}/>)}
+                    leftEl={(<BackBtn onBackPress={() => {this.props.navigation.pop(),DeviceEventEmitter.emit('changeStatusBarStyle',globalBarStyle)}}/>)}
                 />
                 <Text>page1</Text>
                 <RenderText whenRender={!_.isEmpty(title)}>{title}</RenderText>
