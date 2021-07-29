@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import {View,StyleSheet,Text, RefreshControl, StatusBar} from 'react-native'
+import {View,StyleSheet,Text, RefreshControl, StatusBar, TouchableWithoutFeedback, Keyboard} from 'react-native'
 import NavBar from '../../components/navbar/NavBar'
 import {DefaultBackgroundColor, getThemColor} from '../../utils/styles'
 import CstylBtn from '../../components/btnCom/CstylBtn'
@@ -7,6 +7,7 @@ import Spacer from '../../components/Spacer'
 import CstyleModal from '../../components/CstyleModal'
 import { ScrollView } from 'react-navigation'
 import CstyleSwitch from '../../testComponents/CstyleSwitch'
+import CstyleInput from '../../testComponents/CstyleInput'
 
 const styles = StyleSheet.create({
     container:{
@@ -52,7 +53,8 @@ class MyView extends Component{
     render(){
         const {modalVisible,eachArray,refreshing,switchVal} = this.state
         return (
-            <View style={styles.container}>
+            // <TouchableWithoutFeedback onPress={() => {Keyboard.dismiss()}}>
+                <View style={styles.container}>
                 <NavBar
                     title={'我的'}
                 />
@@ -78,6 +80,8 @@ class MyView extends Component{
                         onValueChange={this.valueChange}
                     />
                 </View>
+                <Spacer/>
+                <CstyleInput/>
                 <Spacer/>
                 <ScrollView 
                     style={{flex:1}}
