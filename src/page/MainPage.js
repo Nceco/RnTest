@@ -6,6 +6,7 @@ import TabNavigator from 'react-native-tab-navigator'
 import { iosBottom } from '../../utils/ios'
 import MyView from './MyView'
 import HomeView from './HomeView'
+import TestView from './TestView'
 import SetView from './SetView'
 
 const styles = StyleSheet.create({
@@ -51,6 +52,7 @@ const styles = StyleSheet.create({
 
 const tabItemArray = [
     {title:'首页',component:HomeView,key:'HomeView'},
+    {title:'测试',component:TestView,key:'TestView'},
     {title:'我的',component:MyView,key:'MyView'},
     {title:'设置',component:SetView,key:'SetView'}
 ]
@@ -59,6 +61,10 @@ const tabItemImages = [
     {
         renderIcon: require('../resource/images/home.png'),
         renderSelectedIcon: require('../resource/images/home_selected.png')
+    },
+    {
+        renderIcon:require('../resource/images/test.png'),
+        renderSelectedIcon:require('../resource/images/test_selected.png')
     },
     {
         renderIcon:require('../resource/images/my.png'),

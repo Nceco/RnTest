@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import {View,StyleSheet,Text, RefreshControl, StatusBar, TouchableWithoutFeedback, Keyboard} from 'react-native'
+import {View,StyleSheet,Text, RefreshControl, StatusBar, TouchableWithoutFeedback, Keyboard, Alert} from 'react-native'
 import NavBar from '../../components/navbar/NavBar'
 import {DefaultBackgroundColor, getThemColor} from '../../utils/styles'
 import CstylBtn from '../../components/btnCom/CstylBtn'
@@ -8,6 +8,7 @@ import CstyleModal from '../../components/CstyleModal'
 import { ScrollView } from 'react-navigation'
 import CstyleSwitch from '../../testComponents/CstyleSwitch'
 import CstyleInput from '../../testComponents/CstyleInput'
+import CstyleTouchableHighlight from '../../components/CstyleTouchableHighlight'
 
 const styles = StyleSheet.create({
     container:{
@@ -65,9 +66,20 @@ class MyView extends Component{
                         titleStyle={{color:'#FFFFFF'}} 
                         btnStyle={{width:100,backgroundColor:getThemColor(),borderRadius:0}}
                         onPress={() => {
-                            this.setState({
-                                modalVisible:true
-                            })
+                            // this.setState({
+                            //     modalVisible:true
+                            // })
+                            Alert.alert('','请选择',[
+                                {
+                                    text:'取消',
+                                    onPress:() => {}
+                                },
+                                {
+                                    text:'确定',
+                                    onPress:() => {},
+                                    style:'destructive'
+                                }
+                            ])
                         }}
                     />
                 </View>
@@ -81,7 +93,8 @@ class MyView extends Component{
                     />
                 </View>
                 <Spacer/>
-                <CstyleInput/>
+                <CstyleTouchableHighlight/>
+                {/* <CstyleInput/> */}
                 <Spacer/>
                 <ScrollView 
                     style={{flex:1}}
