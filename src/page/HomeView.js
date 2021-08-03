@@ -7,6 +7,7 @@ import Spacer from '../../components/Spacer'
 import CstyleImage from '../../testComponents/CstyleImage'
 import CstyleActivityIndicator from '../../testComponents/CstyleActivityIndicator'
 import CstyleImageBackground from '../../testComponents/CstyleImageBackground'
+import CstyleInput from '../../testComponents/CstyleInput'
 
 const styles = StyleSheet.create({
     container:{
@@ -46,6 +47,7 @@ class HomeView extends Component{
                             <Text style={{color:'#FFFFFF',textAlign:'center',lineHeight:240}}>hello ImageBackground</Text>
                         </CstyleImageBackground>
                     </View>
+                    <CstyleInput/>
                 </KeyboardAwareScrollView>
             </View>
         )

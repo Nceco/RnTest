@@ -23,15 +23,52 @@ class TestView extends Component{
     fadeIn = () => {
         Animated.timing(this.state.opacityVal,{
             toValue:1,
-            duration:1000
+            duration:1000,
+            useNativeDriver:true
         }).start()
     }
 
     fadeOut = () => {
         Animated.timing(this.state.opacityVal,{
             toValue:0,
-            duration:1000
+            duration:1000,
+            useNativeDriver:true
         }).start()
+    }
+
+    spacerView = () => {
+        return (
+            <View>
+                <Spacer
+                    SpacerStyle={{backgroundColor:'#EEEEEE'}}
+                />
+                <Spacer
+                    SpacerStyle={{backgroundColor:'#EEEEEE'}}
+                />
+                <Spacer
+                    SpacerStyle={{backgroundColor:'#EEEEEE'}}
+                />
+            </View>
+        )
+    }
+
+    btnView = () => {
+        return (
+            <View style={{flexDirection:'row',justifyContent:'space-around',alignItems:'center'}}>
+                <CstylBtn
+                    title='fadeIn'
+                    onPress={this.fadeIn}
+                    titleStyle={{color:'#FFFFFF'}} 
+                    btnStyle={{width:100,backgroundColor:getThemColor(),borderRadius:0}}
+                />
+                <CstylBtn
+                    title='fadeOut'
+                    onPress={this.fadeOut}
+                    titleStyle={{color:'#FFFFFF'}} 
+                    btnStyle={{width:100,backgroundColor:getThemColor(),borderRadius:0}}
+                />
+            </View>
+        )
     }
 
     render(){
@@ -52,29 +89,8 @@ class TestView extends Component{
                     >
                         <Text>Animated opacity</Text>
                     </Animated.View>
-                    <Spacer
-                        SpacerStyle={{backgroundColor:'#EEEEEE'}}
-                    />
-                    <Spacer
-                        SpacerStyle={{backgroundColor:'#EEEEEE'}}
-                    />
-                    <Spacer
-                        SpacerStyle={{backgroundColor:'#EEEEEE'}}
-                    />
-                    <View style={{flexDirection:'row',justifyContent:'space-around',alignItems:'center'}}>
-                        <CstylBtn
-                            title='fadeIn'
-                            onPress={this.fadeIn}
-                            titleStyle={{color:'#FFFFFF'}} 
-                            btnStyle={{width:100,backgroundColor:getThemColor(),borderRadius:0}}
-                        />
-                        <CstylBtn
-                            title='fadeOut'
-                            onPress={this.fadeOut}
-                            titleStyle={{color:'#FFFFFF'}} 
-                            btnStyle={{width:100,backgroundColor:getThemColor(),borderRadius:0}}
-                        />
-                    </View>
+                    {this.spacerView()}
+                    {this.btnView()}
                 </KeyboardAwareScrollView>
             </View>
         )

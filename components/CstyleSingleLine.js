@@ -10,7 +10,9 @@ const styles = StyleSheet.create({
          flexDirection:'row',
          justifyContent:'space-between',
          alignItems:'center',
-         paddingHorizontal:10   
+         paddingHorizontal:10,
+         borderBottomColor:'#EEEEEE',
+         borderBottomWidth:1   
     }
 })
 

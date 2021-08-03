@@ -5,11 +5,16 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import CstyleSingleLine from '../../components/CstyleSingleLine'
 
 class SetView extends Component{
-    goPage = () => {
+    goFlatListPage = () => {
         const {navigate} = this.props.navigation
         navigate('PageOne')
         DeviceEventEmitter.emit('changeStatusBarStyle','dark-content')
     }
+
+    goThemePage = () => {
+        console.log('67868')
+    }
+
     render(){
         return (
             <View>
@@ -17,7 +22,8 @@ class SetView extends Component{
                     title={'设置'}
                 />
                 <KeyboardAwareScrollView>
-                    <CstyleSingleLine title={'主题色切换'} goPage={this.goPage}/>
+                    <CstyleSingleLine title={'主题色切换'} goPage={this.goThemePage}/>
+                    <CstyleSingleLine title={'FlatList'} goPage={this.goFlatListPage}/>
                 </KeyboardAwareScrollView>
             </View>
         )

@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import {createAppContainer} from 'react-navigation'
-import {StyleSheet,View,DeviceEventEmitter, LogBox} from 'react-native'
+import {StyleSheet,View,DeviceEventEmitter, LogBox , Appearance, AppState, DevSettings,Alert, Keyboard} from 'react-native'
 import {globalBarStyle} from './utils/styles'
 import CstyleStatusBar from './components/CstyleStatusBar'
 import 'react-native-gesture-handler'
@@ -29,9 +29,17 @@ class App extends Component{
 
   componentDidMount(){
     // 忽略警告
-    // LogBox.ignoreAllLogs(disabled)
     // console.disableYellowBox = true
     LogBox.ignoreAllLogs()
+    // AppState.addEventListener('change',(d) => {
+    //   console.log(d)
+    // })
+    // Keyboard.addListener('keyboardDidShow',() => {
+    //   console.log('qi')
+    // })
+    // Keyboard.addListener('keyboardDidHide',() => {
+    //   Alert.alert('走')
+    // })
     this.barListener =  DeviceEventEmitter.addListener('changeStatusBarStyle',barStyle => {
       this.setState({
         barStyle
