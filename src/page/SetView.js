@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component, useCallback} from 'react'
 import NavBar from '../../components/navbar/NavBar'
 import {View,DeviceEventEmitter} from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
@@ -11,9 +11,19 @@ class SetView extends Component{
         DeviceEventEmitter.emit('changeStatusBarStyle','dark-content')
     }
 
+    goWebViewPage = () => {
+        const {navigate} = this.props.navigation
+        navigate('WebViewPage')
+    }
+
     goThemePage = () => {
         console.log('67868')
     }
+
+    // packFun = (callback) => {
+    //     callback()
+    //     DeviceEventEmitter.emit('changeStatusBarStyle','dark-content')
+    // }
 
     render(){
         return (
@@ -24,6 +34,7 @@ class SetView extends Component{
                 <KeyboardAwareScrollView>
                     <CstyleSingleLine title={'主题色切换'} goPage={this.goThemePage}/>
                     <CstyleSingleLine title={'FlatList'} goPage={this.goFlatListPage}/>
+                    <CstyleSingleLine title={'WebView'} goPage={this.goWebViewPage}/>
                 </KeyboardAwareScrollView>
             </View>
         )

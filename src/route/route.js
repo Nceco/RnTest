@@ -1,6 +1,7 @@
 import PageOne from "../page/PageOne"
 import PageTwo from "../page/PageTwo"
 import MainPage from "../page/MainPage"
+import WebViewPage from '../page/WebViewPage'
 
 const Route = {
     PageOne:{
@@ -10,6 +11,10 @@ const Route = {
     PageTwo:{
         screen:PageTwo,
         desc:'页面2'
+    },
+    WebViewPage:{
+        screen:WebViewPage,
+        desc:'webView'
     },
     MainPage:{
         screen:MainPage,

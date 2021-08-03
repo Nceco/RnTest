@@ -68,16 +68,16 @@ class PageOne extends Component{
                     {id:6,name:'jack5',age:26},
                     {id:7,name:'jack6',age:27},
                     {id:8,name:'jack8',age:28},
-                    {id:9,name:'jac7k',age:29},
-                    {id:0,name:'jack9',age:22}
+                    {id:9,name:'jac7k',age:29}
+                    // {id:0,name:'jack9',age:22}
                     // {id:10,name:'jack0',age:25}
                 ]
-                if(+page > 1){
-                    console.log('3424')
-                    for(let i=0;i<5;i++){
-                        resultData.push({id:new Date().getTime(),name:'lucy'+i+page,age:'22'+i+page})
-                    }
-                }
+                // if(+page > 1){
+                //     console.log('3424')
+                //     for(let i=0;i<5;i++){
+                //         resultData.push({id:new Date().getTime(),name:'lucy'+i+page,age:'22'+i+page})
+                //     }
+                // }
                 this.setState({
                     dataList:{
                         data:resultData,
