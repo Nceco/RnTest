@@ -1,4 +1,4 @@
-import React, {Component, useCallback} from 'react'
+import React, {Component} from 'react'
 import NavBar from '../../components/navbar/NavBar'
 import {View,DeviceEventEmitter} from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
