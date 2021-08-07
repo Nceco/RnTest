@@ -185,13 +185,17 @@ class CstyleTextInput extends Component{
         const {
             inputProps,
             style,
-            inputStyle
+            inputStyle,
+            textRef
         } = this.props
         return (
             <View style={[styles.container,style]}>
                 {this.needRenderLeftIcon()}
                 <TextInput
                     ref={refs => {
+                        if(textRef && _.isFunction(textRef)){
+                            textRef(refs)
+                        }
                         this.input = refs
                     }}
                     style={[styles.inputViewStyle,inputStyle]}

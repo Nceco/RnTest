@@ -1,9 +1,8 @@
 import React,{Component} from 'react'
-import {View,StyleSheet} from 'react-native'
+import {View,StyleSheet,Text} from 'react-native'
 import NavBar from '../../components/navbar/NavBar'
 import { DefaultBackgroundColor } from '../../utils/styles'
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view'
-import Spacer from '../../components/Spacer'
 import CstyleTextInput from '../../components/CstyleInput/CstyleTextInput'
 
 const styles = StyleSheet.create({
@@ -22,8 +21,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#FFFFFF',
         flexDirection:'row',
         justifyContent:'center',
-        alignItems:'center',
-        paddingHorizontal:10
+        alignItems:'center'
     },
     inputContainerStyle:{
         flex:1,
@@ -42,39 +40,67 @@ class HomeView extends Component{
     constructor(props){
         super(props)
         this.state = {
-            inputVal:''
+            inputVal:'',
+            inputValLast:'NULL'
         }
+        this.input
+    }
+
+    searchView = () => {
+        const {inputVal} = this.state
+        return (
+            <View style={styles.inputViewStyle}>
+                <CstyleTextInput
+                    textRef={refs => {
+                        this.input = refs
+                    }}
+                    leftIconColor={'#999999'}
+                    style={styles.inputContainerStyle}
+                    inputStyle={styles.inputStyle}
+                    inputProps={{
+                        clearButtonMode:'while-editing',
+                        // clearButtonMode:'never',
+                        // clearButtonMode:'unless-editing',
+                        // clearButtonMode:'always',
+                        placeholder:'请输入搜索条件',
+                        placeholderTextColor:'#999999',
+                        value:inputVal,
+                        onChangeText:(val) => {
+                            this.setState({
+                                inputVal:val
+                            })
+                        },
+                        onSubmitEditing:() => {
+                            this.setState({
+                                inputValLast:inputVal
+                            })
+                            this.input.clear()
+
+                        }
+                    }}
+                />
+            </View>
+        )
     }
     render(){
-        const {inputVal} = this.state
+        const {inputValLast} = this.state
         return (
             <View style={styles.container}>
                 <NavBar
                     title={'首页'}
-                />
-                <Spacer SpacerStyle={{backgroundColor:DefaultBackgroundColor}}/>    
-                <KeyboardAwareScrollView keyboardShouldPersistTaps={'handled'}>
-                    <View style={styles.inputViewStyle}>
-                            <CstyleTextInput
-                                leftIconColor={'#999999'}
-                                style={styles.inputContainerStyle}
-                                inputStyle={styles.inputStyle}
-                                inputProps={{
-                                    clearButtonMode:'while-editing',
-                                    // clearButtonMode:'never',
-                                    // clearButtonMode:'unless-editing',
-                                    // clearButtonMode:'always',
-                                    placeholder:'请输入搜索条件',
-                                    placeholderTextColor:'#999999',
-                                    value:inputVal,
-                                    onChangeText:(val) => {
-                                        this.setState({
-                                            inputVal:val
-                                        })
-                                    }
-                                }}
-                            />
-                        </View>
+                /> 
+                <KeyboardAwareScrollView 
+                    keyboardShouldPersistTaps={'handled'}
+                    contentContainerStyle={{
+                        backgroundColor:'#FFFFFF',
+                        flex:1,
+                        paddingHorizontal:10
+                    }}
+                >
+                    {this.searchView()}
+                    <View>
+                        <Text>输入框的值是:{inputValLast}</Text>
+                    </View>
                 </KeyboardAwareScrollView>
             </View>
         )
