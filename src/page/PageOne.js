@@ -97,7 +97,7 @@ class PageOne extends Component{
         return (
             <View style={styles.container}>
                 <NavBar
-                    title='PageOne'
+                    title='FlatList'
                     leftEl={(<BackBtn onBackPress={() => {this.props.navigation.pop(),DeviceEventEmitter.emit('changeStatusBarStyle',globalBarStyle)}}/>)}
                 />
                 {/* <Text>page1</Text>

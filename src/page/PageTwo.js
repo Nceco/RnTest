@@ -84,7 +84,7 @@ class PageTwo extends Component{
         return (
             <View style={styles.container}>
                 <NavBar
-                    title='PageTwo'
+                    title='TextInput'
                     leftEl={(<BackBtn onBackPress={() => {this.props.navigation.pop()}}/>)}
                 />
                 <KeyboardAwareScrollView 
