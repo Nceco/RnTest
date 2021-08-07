@@ -16,6 +16,11 @@ class SetView extends Component{
         navigate('WebViewPage')
     }
 
+    goInputPage = () => {
+        const {navigate} = this.props.navigation
+        navigate('PageTwo')
+    }
+
     goThemePage = () => {
         console.log('67868')
     }
@@ -35,6 +40,7 @@ class SetView extends Component{
                     <CstyleSingleLine title={'主题色切换'} goPage={this.goThemePage}/>
                     <CstyleSingleLine title={'FlatList'} goPage={this.goFlatListPage}/>
                     <CstyleSingleLine title={'WebView'} goPage={this.goWebViewPage}/>
+                    <CstyleSingleLine title={'TextInput单行'} goPage={this.goInputPage}/>
                 </KeyboardAwareScrollView>
             </View>
         )
