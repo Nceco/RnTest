@@ -8,11 +8,28 @@ import Swiper from 'react-native-swiper'
 import { getScreenWidth } from '../../utils/util'
 import Carousel from 'react-native-looped-carousel'
 import { CalendarManager } from '../../nativeUtils/native-utils'
+import CstyleSwiperBanner from '../../components/CstyleSwiperBanner'
+
+const imgList = [
+    {
+        name:'img1',
+        value:require('../resource/images/cx_01.jpg')
+    },
+    {
+        name:'img2',
+        value:require('../resource/images/cx_02.jpg')
+    },
+    {
+        name:'img3',
+        value:require('../resource/images/cx_03.jpg')
+    }
+]
 
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:DefaultBackgroundColor
+        backgroundColor:DefaultBackgroundColor,
+        alignItems:'center'
     },
     activityIndictorStyle:{
         flexDirection:'row',
@@ -43,53 +60,11 @@ class HomeView extends Component{
                 <NavBar
                     title={'首页'}
                 /> 
-                <View style={{height:110,width:getScreenWidth() - 30,marginLeft:15,borderRadius:10,overflow:'hidden'}}>
-                {/* <Carousel
+                {/* 轮播图 */}
+                <CstyleSwiperBanner
+                    imgList={imgList}
                     delay={2000}
-                    style={{with:100,height:110}}
-                    autoplay
-                    bullets
-                    bulletStyle={{
-                        backgroundColor:'rgba(0,0,0,.2)',
-        width: 11,
-        height: 4,
-        borderRadius: 2,
-        borderColor:'rgba(0,0,0,.2)'
-        // marginLeft: 3,
-        // marginRight: 3,
-        // marginTop: 3,
-        // marginBottom: 3
-                    }}
-                    chosenBulletStyle={{
-                        backgroundColor:'#FFFFFF',
-        width: 11,
-        height: 4,
-        borderRadius: 2,
-        // marginLeft: 3,
-        // marginRight: 3,
-        // marginTop: 3,
-        // marginBottom: 3
-                    }}
-                    bulletsContainerStyle={{
-                        bottom:0
-                    }}
-                    // pageInfo
-                    // onAnimateNextPage={(p) => console.log(p)}
-                >
-                    <View style={{ backgroundColor: '#BADA55' ,width:getScreenWidth() - 30,height:110}}><Text>1</Text></View>
-                    <View style={{ backgroundColor: 'red' ,width:getScreenWidth() - 30,height:110}}><Text>2</Text></View>
-                    <View style={{ backgroundColor: 'blue' ,width:getScreenWidth() - 30,height:110}}><Text>3</Text></View>
-                </Carousel> */}
-                </View>
-                {/* <KeyboardAwareScrollView 
-                    keyboardShouldPersistTaps={'handled'}
-                    contentContainerStyle={{
-                        backgroundColor:'#FFFFFF',
-                        flex:1,
-                        paddingHorizontal:10
-                    }}
-                >
-                </KeyboardAwareScrollView> */}
+                />
             </View>
         )
     }
