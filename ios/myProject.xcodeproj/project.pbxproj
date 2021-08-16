@@ -18,6 +18,10 @@
 		68968B37BAA544DD91BCDD64 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61982D454CF94EE392706DD9 /* Feather.ttf */; };
 		6B48F87A268363DC00F6C72F /* main.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B48F878268363DC00F6C72F /* main.ios.jsbundle */; };
 		6B48F87B268363DC00F6C72F /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 6B48F879268363DC00F6C72F /* assets */; };
+		6B6FEBBC26CA103300981268 /* helloWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6FEBBB26CA103300981268 /* helloWorld.m */; };
+		6B6FEBBE26CA32FB00981268 /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6FEBBD26CA32FB00981268 /* RNTMapManager.m */; };
+		6B6FEBC026CA332400981268 /* RNTMapManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 6B6FEBBF26CA332400981268 /* RNTMapManager.h */; };
+		6B6FEBC226CA394800981268 /* RCTConvert+Mapkit.h in Sources */ = {isa = PBXBuildFile; fileRef = 6B6FEBC126CA394800981268 /* RCTConvert+Mapkit.h */; };
 		6B82A5A8212D4EF4809E2B97 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9360AAD39EFA486E97B813BC /* FontAwesome5_Regular.ttf */; };
 		6BE1166626720AE90097BA5F /* brid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE1166526720AE90097BA5F /* brid.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -49,6 +53,11 @@
 		6A2002EA6999159CD3FD144E /* libPods-myProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B48F878268363DC00F6C72F /* main.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.ios.jsbundle; path = bundle/main.ios.jsbundle; sourceTree = "<group>"; };
 		6B48F879268363DC00F6C72F /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = bundle/assets; sourceTree = "<group>"; };
+		6B6FEBBA26CA103300981268 /* helloWorld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = helloWorld.h; sourceTree = "<group>"; };
+		6B6FEBBB26CA103300981268 /* helloWorld.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = helloWorld.m; sourceTree = "<group>"; };
+		6B6FEBBD26CA32FB00981268 /* RNTMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTMapManager.m; sourceTree = "<group>"; };
+		6B6FEBBF26CA332400981268 /* RNTMapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTMapManager.h; sourceTree = "<group>"; };
+		6B6FEBC126CA394800981268 /* RCTConvert+Mapkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCTConvert+Mapkit.h"; sourceTree = "<group>"; };
 		6BE1166426720AE90097BA5F /* myProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		6BE1166526720AE90097BA5F /* brid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brid.swift; sourceTree = "<group>"; };
 		7AA9BA50EB9A4E76A6FACF47 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
@@ -114,6 +123,11 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				6BE1166526720AE90097BA5F /* brid.swift */,
 				6BE1166426720AE90097BA5F /* myProject-Bridging-Header.h */,
+				6B6FEBBA26CA103300981268 /* helloWorld.h */,
+				6B6FEBBB26CA103300981268 /* helloWorld.m */,
+				6B6FEBBD26CA32FB00981268 /* RNTMapManager.m */,
+				6B6FEBBF26CA332400981268 /* RNTMapManager.h */,
+				6B6FEBC126CA394800981268 /* RCTConvert+Mapkit.h */,
 			);
 			name = myProject;
 			sourceTree = "<group>";
@@ -378,7 +392,11 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				6BE1166626720AE90097BA5F /* brid.swift in Sources */,
+				6B6FEBC226CA394800981268 /* RCTConvert+Mapkit.h in Sources */,
+				6B6FEBBE26CA32FB00981268 /* RNTMapManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				6B6FEBBC26CA103300981268 /* helloWorld.m in Sources */,
+				6B6FEBC026CA332400981268 /* RNTMapManager.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

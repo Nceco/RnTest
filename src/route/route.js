@@ -2,6 +2,7 @@ import PageOne from "../page/PageOne"
 import PageTwo from "../page/PageTwo"
 import MainPage from "../page/MainPage"
 import WebViewPage from '../page/WebViewPage'
+import MapView from "../page/MapView"
 
 const Route = {
     PageOne:{
@@ -19,6 +20,10 @@ const Route = {
     MainPage:{
         screen:MainPage,
         desc:'首页界面'
+    },
+    MapView:{
+        screen:MapView,
+        desc:'原生地图'
     }
 }
 

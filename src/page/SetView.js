@@ -24,6 +24,11 @@ class SetView extends Component{
     goThemePage = () => {
         console.log('67868')
     }
+    
+    goMapViewPage = () => {
+        const {navigate} = this.props.navigation
+        navigate('MapView')
+    }
 
     // packFun = (callback) => {
     //     callback()
@@ -41,6 +46,7 @@ class SetView extends Component{
                     <CstyleSingleLine title={'FlatList'} goPage={this.goFlatListPage}/>
                     <CstyleSingleLine title={'WebView'} goPage={this.goWebViewPage}/>
                     <CstyleSingleLine title={'TextInput单行'} goPage={this.goInputPage}/>
+                    <CstyleSingleLine title={'原生地图'} goPage={this.goMapViewPage}/>
                 </KeyboardAwareScrollView>
             </View>
         )
