@@ -9,6 +9,8 @@ import { getScreenWidth } from '../../utils/util'
 import Carousel from 'react-native-looped-carousel'
 import { CalendarManager } from '../../nativeUtils/native-utils'
 import CstyleSwiperBanner from '../../components/CstyleSwiperBanner'
+import CstyleBtn from '../../components/btnCom/CstylBtn'
+import Toast from '../../components/Toast/Toast'
 
 const imgList = [
     {
@@ -64,6 +66,13 @@ class HomeView extends Component{
                 <CstyleSwiperBanner
                     imgList={imgList}
                     delay={2000}
+                />
+                <CstyleBtn
+                    btnStyle={{width:100,borderRadius:0,marginTop:100}}
+                    title={'show'}
+                    onPress={() => {
+                        Toast.showShortCenter('啦啦啦啦～')
+                    }}
                 />
             </View>
         )

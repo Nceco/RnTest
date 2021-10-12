@@ -16,6 +16,7 @@
     "react-native-gesture-handler": "^1.10.3",
     "react-native-keyboard-aware-scroll-view": "^0.9.4",
     "react-native-looped-carousel": "^0.1.13",
+    "react-native-root-toast": "^3.2.1",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-swiper": "^1.6.0",
     "react-native-tab-navigator": "^0.3.4",
