@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import {createAppContainer} from 'react-navigation'
-import {StyleSheet,View,DeviceEventEmitter, LogBox , Appearance, AppState, DevSettings,Alert, Keyboard} from 'react-native'
+import {StyleSheet,View,DeviceEventEmitter, LogBox} from 'react-native'
 import {globalBarStyle} from './utils/styles'
 import CstyleStatusBar from './components/CstyleStatusBar'
 import 'react-native-gesture-handler'

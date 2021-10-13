@@ -16,6 +16,8 @@ target 'myProject' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+
   # target 'myProjectTests' do
   #   # inherit! :complete
   #   # Pods for testing
