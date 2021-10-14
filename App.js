@@ -6,6 +6,7 @@ import CstyleStatusBar from './components/CstyleStatusBar'
 import 'react-native-gesture-handler'
 
 import AppNavigator from './src/route/StackNavigator'
+import { getStorage, setStorage } from './utils/storge'
 
 
 const styles = StyleSheet.create({
@@ -28,6 +29,10 @@ class App extends Component{
   }
 
   componentDidMount(){
+    setStorage('themColor','dsa')
+    setTimeout(async () => {
+      const val = await getStorage('themColor')
+    },3000)
     // 忽略警告
     // console.disableYellowBox = true
     LogBox.ignoreAllLogs()
