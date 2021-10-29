@@ -11,6 +11,7 @@ import { CalendarManager } from '../../nativeUtils/native-utils'
 import CstyleSwiperBanner from '../../components/CstyleSwiperBanner'
 import CstyleBtn from '../../components/btnCom/CstylBtn'
 import Toast from '../../components/Toast/Toast'
+import {contactUtils} from '../../nativeUtils/native-utils'
 
 const imgList = [
     {
@@ -70,8 +71,14 @@ class HomeView extends Component{
                 <CstyleBtn
                     btnStyle={{width:100,borderRadius:0,marginTop:100}}
                     title={'show'}
-                    onPress={() => {
-                        Toast.showShortCenter('啦啦啦啦～')
+                    onPress={async () => {
+                        const str = await contactUtils.requestContactAuthorAfterSystemVersion9()
+                        if(str == 'true'){
+                           contactUtils.addContact("Csty","le","13218023523") 
+                           Toast.showLongCenter('添加成功')    
+                        }else if(str == 'false'){
+                            Toast.showLongCenter('请在iPhone的设置-隐私-通讯录选项中,允许myProject访问你的通讯录')      
+                        }
                     }}
                 />
             </View>
