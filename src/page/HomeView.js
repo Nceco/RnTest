@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import {View,StyleSheet,Text, Image,Alert} from 'react-native'
+import {View,StyleSheet,Text, Image,Alert, Platform} from 'react-native'
 import NavBar from '../../components/navbar/NavBar'
 import { DefaultBackgroundColor } from '../../utils/styles'
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view'
@@ -11,7 +11,7 @@ import { CalendarManager } from '../../nativeUtils/native-utils'
 import CstyleSwiperBanner from '../../components/CstyleSwiperBanner'
 import CstyleBtn from '../../components/btnCom/CstylBtn'
 import Toast from '../../components/Toast/Toast'
-import {contactUtils} from '../../nativeUtils/native-utils'
+import {contactUtils,ToastNative} from '../../nativeUtils/native-utils'
 
 const imgList = [
     {
@@ -72,12 +72,16 @@ class HomeView extends Component{
                     btnStyle={{width:100,borderRadius:0,marginTop:100}}
                     title={'show'}
                     onPress={async () => {
-                        const str = await contactUtils.requestContactAuthorAfterSystemVersion9()
-                        if(str == 'true'){
-                           contactUtils.addContact("Csty","le","13218023523") 
-                           Toast.showLongCenter('添加成功')    
-                        }else if(str == 'false'){
-                            Toast.showLongCenter('请在iPhone的设置-隐私-通讯录选项中,允许myProject访问你的通讯录')      
+                        if(Platform.OS == 'ios'){
+                            const str = await contactUtils.requestContactAuthorAfterSystemVersion9()
+                            if(str == 'true'){
+                            contactUtils.addContact("Csty","le","13218023523") 
+                            Toast.showLongCenter('添加成功')    
+                            }else if(str == 'false'){
+                                Toast.showLongCenter('请在iPhone的设置-隐私-通讯录选项中,允许myProject访问你的通讯录')      
+                            }
+                        }else if(Platform.OS == 'android'){
+                            ToastNative.show('hhhhh',1000);
                         }
                     }}
                 />
